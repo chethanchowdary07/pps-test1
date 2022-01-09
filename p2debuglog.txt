@@ -1,0 +1,23 @@
+
+ program: /home/runner/pps-test1/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main (x=1, y=1628767496, z=1628767512) at p2original.c:24
+24    x=input();
+(gdb) n
+enter the number:
+4
+25    y=input();
+(gdb) n
+enter the number:
+16
+26    z=summ(x,y);
+(gdb) n
+27    print(x,y,z);
+(gdb) n
+the sum is 16+4=20
+28    return 0;
+(gdb) c
+Continuing.
+[Inferior 1 (process 150) exited normally]
+(gdb) 
