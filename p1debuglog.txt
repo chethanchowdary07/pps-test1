@@ -1,0 +1,22 @@
+gcc -g p1original.c
+Please answer y or n.
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+Starting program: /home/runner/pps-test1/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p1original.c:5
+5     a=7;
+(gdb) n
+6     b=2;
+(gdb) n
+7     c=a+b;
+(gdb) n
+8     printf("%d+%d=%d\n",a,b,c);
+(gdb) n
+7+2=9
+9     return 0;
+(gdb) c
+Continuing.
+[Inferior 1 (process 105) exited normally]
+(gdb) 
