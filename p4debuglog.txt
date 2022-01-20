@@ -1,0 +1,19 @@
+Breakpoint 1, main () at p1original.c:3
+3   {  
+(gdb) n
+5     printf("enter two numbers:");
+(gdb) n
+6     scanf("%d %d",&a,&b);
+(gdb) n
+enter two numbers:4 7
+7     c=a+b;
+(gdb) n
+8     printf("%d+%d=%d\n",a,b,c);
+(gdb) n
+4+7=11
+9     return 0;
+(gdb) p a
+$1 = 4
+(gdb) p b
+$2 = 7
+(gdb) 
