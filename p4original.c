@@ -1,21 +1,34 @@
 #include<stdio.h>
-void input(int x,int y)
+int input()
 {
-  printf("enter the two numbers:");
-  scanf("%d %d",x,y);
+  int a;
+  printf("enter the number:");
+  scanf("%d",&a);
+  return a;
 }
-void sum(int x,int y,int z)
+int cmp(int a,int b,int c)
 {
- z=x+y;
+  if(a>b&&a>c){
+    return a;
+  }
+  else if (b>a&&b>c){
+    return b;
+  }
+  else{
+    return c;
+  }
 }
-void output(int x,int y,int z)
+void output(int a,int b,int c,int largest)
 {
-  printf("%d+%d=%d",x,y,z);
+  printf("the greatest number of %d,%d,%d is %d",a,b,c,largest);
 }
-int main(int a,int b,int c)
+int main()
 {
-  input(&a,&b);
-  sum(a,b,&c);
-  output(a,b,c);
-  return 0;
+  int x,y,z,largets;
+  x=input();
+  y=input();
+  z=input();
+  largets=cmp(x,y,z);
+  output(x,y,z,largets);
+  
 }
